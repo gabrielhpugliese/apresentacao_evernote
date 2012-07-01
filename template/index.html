@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+  <head>
+    <title>Iniciando uma aplicação web no Heroku com Python+Flask</title>
+
+    <meta charset='utf-8'>
+    <script src='../slides.js'> </script>
+  </head>
+  
+  <style>
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('../1.woff') format('woff');
+}
+  </style>
+
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-default'>
+      <article>
+        <h1>
+          Iniciando uma aplicação web no Heroku com Python+Flask
+          <br>
+        </h1>
+        <p>
+          Gabriel Pugliese
+          <br>
+          @gabrielsapo
+          <br>
+          www.facebook.com/gabrielsapo
+          <br>
+          www.github.com/gabrielhpugliese
+        </p>
+      </article>
+
+      <article>
+        <h3>
+          Heroku
+        </h3>
+        <ul class="build">
+          <li>
+            Plataforma de computação em nuvem desde 2007
+          </li>
+          <li>
+            Suporta Python, Node.js, Ruby, Java, PHP, Scala e Clojure
+          </li>
+          <li>
+            Vários tipos de banco de dados (PostgreSQL grátis)
+          </li>
+          <li>
+          	Vários tipos de add-ons (SMS Gateway, Video Encoding etc.)
+          </li>
+          <li>
+          	Certificado SSL grátis! (Ótimo para testes em canvas do Facebook)
+          </li>
+        </ul>
+      </article>
+      
+      <article>
+        <h3>
+          Python
+        </h3>
+        <pre>
+def hello_tdc():
+    print 'Hello TDC!'
+        </pre>
+        <ul class="build">
+          <li>
+            Linguagem de aprendizagem inicial rápida
+          </li>
+          <li>
+            Uma das linguagens oficiais do Google e Yahoo
+          </li>
+          <li>
+            Dropbox, Instagram, Washington Post etc.
+          </li>
+          <li>
+          	Já está sendo muito utilizado nas Universidades!
+          </li>
+        </ul>
+      </article>
+      
+      <article>
+        <h3>
+          Flask
+        </h3>
+        <pre>
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello_tdc():
+    return "Hello TDC!"
+
+if __name__ == "__main__":
+    app.run()
+		</pre>
+        <ul class="build">
+          <li>
+            A modern, lightweight, well-documented microframework based on Werkzeug and Jinja 2
+          </li>
+          <li>
+            Excelente para fazer serviços web
+          </li>
+          <li>
+            Várias extensões (flask-admin, flask-celery etc.)
+          </li>
+        </ul>
+      </article>
+
+	  <article>
+        <h3>
+          Instalando o Heroku Toolbelt
+        </h3>
+        Ubuntu/Debian:
+        <pre>
+bash#> apt-get install heroku-toolbelt
+        </pre>
+        Outras distros:
+        <pre>
+bash#> wget -qO- https://toolbelt.heroku.com/install.sh | sh
+        </pre>
+        Login:
+        <pre>
+bash#> heroku login
+        </pre>
+      </article>
+      
+      <article>
+        <h3>
+          Configurando o ambiente virtual
+        </h3>
+        Virtualenv:
+        <pre>
+bash#> virtualenv venv --distribute
+bash#> source venv/bin/activate
+bash#> pip install flask
+        </pre>
+      </article>
+      
+      <article>
+      	<h3>
+      		Criando a aplicação
+      	</h3>
+      	app.py:
+        <pre>
+import os
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_tdc():
+    return 'Hello TDC!'
+
+if __name__ == '__main__':
+    # Bind to PORT if defined, otherwise default to 5000.
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+        </pre>
+      </article>
+      
+      <article>
+        <h3>
+        	Configurações do Heroku
+        </h3>
+      	<pre>
+bash#> pip freeze > requirements.txt
+bash#> echo "web: python app.py" > Procfile
+      	</pre>
+      	Teste local:
+      	<pre>
+bash#> foreman start
+      	</pre>
+      </article>
+      
+      <article>
+      	<h3>
+      		Subindo para o Heroku
+      	</h3>
+      	Inicializando repositório git
+      	<pre>
+bash#> git init
+bash#> git add .
+bash#> git commit -am "First commit."
+      	</pre>
+      	Criando app no Heroku
+      	<pre>
+bash#> heroku keys:add
+bash#> heroku apps:create
+bash#> git push heroku master
+      	</pre>
+      </article>
+      
+      <article>
+      	<h3>
+      		Comandos úteis:
+      	</h3>
+      	<pre>
+bash#> heroku ps
+bash#> heroku run python
+bash#> heroku run bash
+      	</pre>
+      </article>
+      
+      <article>
+      	<h2>Obrigado</h2>
+      	<ul>
+      		<li>
+      			<a href='http://blogcloud.com.br'>Blog Cloud</a>
+      		</li>
+      		<li>
+      			<a href='https://devcenter.heroku.com/articles/python'>Heroku: Getting Started with Python</a>
+      		</li>
+      	</ul>
+      </article>
+  </section>
+  </body>
+</html>
