@@ -66,7 +66,7 @@
           	Vários tipos de add-ons (SMS Gateway, Video Encoding etc.)
           </li>
           <li>
-          	Certificado SSL grátis! (Ótimo para testes em canvas do Facebook)
+          	Certificado SSL grátis! (Ótimo para apps em canvas do Facebook)
           </li>
           <li>
           	Crie sua conta agora: <a href='http://www.heroku.com/'>http://www.heroku.com/</a>
@@ -93,7 +93,7 @@ def hello_tdc():
             Dropbox, Instagram, Washington Post etc.
           </li>
           <li>
-          	Já está sendo muito utilizado nas Universidades!
+          	Já está sendo muito utilizado nas universidades!
           </li>
         </ul>
       </article>
@@ -115,15 +115,20 @@ if __name__ == "__main__":
 		</pre>
         <ul class="build">
           <li>
-            A modern, lightweight, well-documented microframework based on Werkzeug and Jinja 2
+            <i>"A modern, lightweight, well-documented microframework based on Werkzeug and Jinja 2"</i>
           </li>
           <li>
             Excelente para fazer serviços web
           </li>
           <li>
-            Várias extensões (flask-admin, flask-celery etc.)
+            Possui várias extensões (flask-admin, flask-celery etc.)
           </li>
         </ul>
+      </article>
+      
+      <article>
+      	<h1>Mão na massa!</h1>
+      	<p>5 slides, 16 comandos no shell</p>
       </article>
 
 	  <article>
@@ -189,7 +194,7 @@ bash> pip freeze > requirements.txt
 # Comando que o server do Heroku executa
 bash> echo "web: python app.py" > Procfile 
       	</pre>
-      	Teste local:
+      	Antes de colocar no Heroku, faça um teste local:
       	<pre>
 bash> foreman start # Emula o ambiente do Heroku
       	</pre>
@@ -199,13 +204,13 @@ bash> foreman start # Emula o ambiente do Heroku
       	<h3>
       		Fazendo upload para o Heroku
       	</h3>
-      	Inicializando repositório git
+      	Inicializando repositório git:
       	<pre>
 bash> git init
 bash> git add .
 bash> git commit -am "First commit."
       	</pre>
-      	Criando app no Heroku
+      	Criando app no Heroku:
       	<pre>
 bash> heroku keys:add # Cria e envia sua chave ssh para o Heroku
 bash> heroku apps:create # Cria uma aplicação no Heroku
@@ -225,13 +230,41 @@ bash> heroku run bash # Bash remoto
       </article>
       
       <article>
+      	<h3>Quando escolher o Heroku?</h3>
+      	<ul class="build">
+      		<li>
+      			Facilidade de deploy através do git
+      		</li>
+      		<li>
+      			Não quer se preocupar com administração de servidores e escalabilidade
+      		</li>
+      		<li>
+      			Não quer se preocupar em comprar e assinar um certificado SSL
+      		</li>
+      		<li>
+      			Precisa de vários add-ons e não quer se preocupar como implementá-los nos servidores
+      		</li>
+      	</ul>
+      </article>
+      
+      <article>
       	<h2>Obrigado</h2>
       	<ul>
       		<li>
-      			Esta apresentação:<br /><a href='http://blogcloud.com.br/tdc2012'>http://blogcloud.com.br/tdc2012</a>
+      			Esta apresentação:<br />
+      			<a href='http://blogcloud.com.br/tdc2012'>http://blogcloud.com.br/tdc2012</a>
       		</li>
       		<li>
-      			Tutorial do Heroku: <a href='https://devcenter.heroku.com/articles/python'>https://devcenter.heroku.com/articles/python</a>
+      			Tutorial de Python 100% em português:<br />
+      			<a href='http://turing.com.br/pydoc/2.7/tutorial/index.html'>http://turing.com.br/pydoc/2.7/tutorial/index.html</a>
+      		</li>
+      		<li>
+      			Documentação do Flask:<br />
+      			<a href='http://flask.pocoo.org/docs/'>http://flask.pocoo.org/docs/</a>
+      		</li>
+      		<li>
+      			Tutorial do Heroku:<br />
+      			<a href='https://devcenter.heroku.com/articles/python'>https://devcenter.heroku.com/articles/python</a>
       		</li>
       	</ul>
       </article>
