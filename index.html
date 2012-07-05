@@ -47,33 +47,6 @@
           github.com/gabrielhpugliese
         </p>
       </article>
-
-      <article>
-        <h3>
-          Heroku
-        </h3>
-        <ul class="build">
-          <li>
-            Plataforma de computação em nuvem desde 2007
-          </li>
-          <li>
-            Suporta Python, Node.js, Ruby, Java, PHP, Scala e Clojure
-          </li>
-          <li>
-            Vários tipos de banco de dados (PostgreSQL grátis)
-          </li>
-          <li>
-          	Vários tipos de add-ons (SMS Gateway, Video Encoding etc.)
-          </li>
-          <li>
-          	Certificado SSL grátis! (Ótimo para apps em canvas do Facebook)
-          </li>
-          <li>
-          	Crie sua conta agora: <a href='http://www.heroku.com/'>http://www.heroku.com/</a>
-          </li>
-        </ul>
-      </article>
-      
       <article>
         <h3>
           Python
@@ -93,7 +66,7 @@ def hello_tdc():
             Dropbox, Instagram, Washington Post etc.
           </li>
           <li>
-          	Já está sendo muito utilizado nas universidades!
+          	Já está sendo muito utilizado nas universidades brasileiras!
           </li>
         </ul>
       </article>
@@ -125,6 +98,32 @@ if __name__ == "__main__":
           </li>
         </ul>
       </article>
+      <article>
+        <h3>
+          Heroku
+        </h3>
+        <ul class="build">
+          <li>
+            Plataforma de computação em nuvem desde 2007
+          </li>
+          <li>
+            Suporta Python, Node.js, Ruby, Java, PHP, Scala e Clojure
+          </li>
+          <li>
+            Vários tipos de banco de dados (PostgreSQL grátis)
+          </li>
+          <li>
+          	Vários tipos de add-ons (SMS Gateway, Video Encoding etc.)
+          </li>
+          <li>
+          	Certificado SSL grátis! (Ótimo para apps em canvas do Facebook)
+          </li>
+          <li>
+          	Crie sua conta agora: <a href='http://www.heroku.com/'>http://www.heroku.com/</a>
+          </li>
+        </ul>
+      </article>
+    
       
       <article>
       	<h1>Mão na massa!</h1>
@@ -226,6 +225,8 @@ bash> git push heroku master # Sincroniza com o git do Heroku
 bash> heroku ps # Mostra serviços rodando
 bash> heroku run python # Shell interativo Python remoto 
 bash> heroku run bash # Bash remoto
+bash> heroku releases # Mostra versões de deploy já feitas
+bash> heroku rollback v45 # Faz rollback para a versão 45
       	</pre>
       </article>
       
