@@ -55,7 +55,7 @@
 def hello_tdc():
     print 'Hello TDC!'
         </pre>
-        <ul class="build">
+        <ul>
           <li>
             Linguagem de aprendizagem inicial rápida
           </li>
@@ -86,7 +86,7 @@ def hello_tdc():
 if __name__ == "__main__":
     app.run()
 		</pre>
-        <ul class="build">
+        <ul>
           <li>
             <i>"A modern, lightweight, well-documented microframework based on Werkzeug and Jinja 2"</i>
           </li>
@@ -102,9 +102,12 @@ if __name__ == "__main__":
         <h3>
           Heroku
         </h3>
-        <ul class="build">
+        <ul>
           <li>
             Plataforma de computação em nuvem desde 2007
+          </li>
+          <li>
+          	Virou parceiro do Facebook em 2011
           </li>
           <li>
             Suporta Python, Node.js, Ruby, Java, PHP, Scala e Clojure
@@ -127,7 +130,7 @@ if __name__ == "__main__":
       
       <article>
       	<h1>Mão na massa!</h1>
-      	<p>5 slides, 16 comandos no shell</p>
+      	<p>16 comandos no shell</p>
       </article>
 
 	  <article>
@@ -137,11 +140,9 @@ if __name__ == "__main__":
         Linux:
         <pre>
 bash> wget -qO- https://toolbelt.heroku.com/install.sh | sh
-        </pre>
-        Login:
-        <pre>
 bash> heroku login
         </pre>
+        <img class='centered' src='images/heroku_login.png'>
       </article>
       
       <article>
@@ -159,6 +160,10 @@ bash> virtualenv venv --distribute # Cria o ambiente virtual
 bash> source venv/bin/activate # Ativa o ambiente virtual
 bash> pip install flask # Instala o Flask
         </pre>
+      </article>
+      
+      <article>
+      	<img class='centered' src='images/virtualenv.png' />
       </article>
       
       <article>
@@ -200,6 +205,10 @@ bash> foreman start # Emula o ambiente do Heroku
       </article>
       
       <article>
+      	<img class='centered' src='images/local_test.png' />
+      </article>
+      
+      <article>
       	<h3>
       		Fazendo upload para o Heroku
       	</h3>
@@ -209,12 +218,17 @@ bash> git init
 bash> git add .
 bash> git commit -am "First commit."
       	</pre>
-      	Criando app no Heroku:
+      	Criando app no Heroku e subindo os arquivos:
       	<pre>
 bash> heroku keys:add # Cria e envia sua chave ssh para o Heroku
 bash> heroku apps:create # Cria uma aplicação no Heroku
 bash> git push heroku master # Sincroniza com o git do Heroku
       	</pre>
+      	
+      </article>
+      
+      <article>
+      	<img class='centered' src='images/heroku_launch.png' />
       </article>
       
       <article>
@@ -228,11 +242,12 @@ bash> heroku run bash # Bash remoto
 bash> heroku releases # Mostra versões de deploy já feitas
 bash> heroku rollback v45 # Faz rollback para a versão 45
       	</pre>
+      	<img class='centered' src='images/rollback.png' />
       </article>
       
       <article>
       	<h3>Quando escolher o Heroku?</h3>
-      	<ul class="build">
+      	<ul>
       		<li>
       			Facilidade de deploy através do git
       		</li>
@@ -252,8 +267,8 @@ bash> heroku rollback v45 # Faz rollback para a versão 45
       	<h2>Obrigado</h2>
       	<ul>
       		<li>
-      			Esta apresentação:<br />
-      			<a href='http://blogcloud.com.br/tdc2012'>http://blogcloud.com.br/tdc2012</a>
+      			Esta apresentação se encontra na nossa fan page:<br />
+      			<a href='https://www.facebook.com/digitalcube.com.br'>https://www.facebook.com/digitalcube.com.br</a>
       		</li>
       		<li>
       			Tutorial de Python 100% em português:<br />
@@ -266,6 +281,10 @@ bash> heroku rollback v45 # Faz rollback para a versão 45
       		<li>
       			Tutorial do Heroku:<br />
       			<a href='https://devcenter.heroku.com/articles/python'>https://devcenter.heroku.com/articles/python</a>
+      		</li>
+      		<li>
+      			Nossa página no +Google:
+      			<a href='http://gplus.to/digitalcube'>gplus.to/digitalcube</a>
       		</li>
       	</ul>
       </article>
