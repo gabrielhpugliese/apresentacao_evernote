@@ -1,4 +1,4 @@
-python_flask_heroku
+Apresentação Evernote Hackathon
 ===================
 
-Apresentação do TDC 2012: Iniciando uma aplicação web no Heroku com Python+Flask
+Apresentação do hack para o Evernote Hackathon 11/2012
